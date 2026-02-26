@@ -40,7 +40,7 @@ h2{text-align:center;color:#ff4f9a}
 <div class="panel">
 <h2>Panel Admin Invitación</h2>
 
-<input id="nombre" placeholder="Marca antonieta de las nieves>
+<input id="nombre" placeholder="Marca antonieta de las nieves">
 <input id="fecha" placeholder="Fecha (26 febrero 2026)">
 <input id="hora" placeholder="Hora (7:00 PM)">
 <input id="lugar" placeholder="Lugar las colinas marlen">
@@ -56,18 +56,18 @@ h2{text-align:center;color:#ff4f9a}
 <script>
 function guardar(){
   const datos={
-    nombre:nombre.value,
-    fecha:fecha.value,
-    hora:hora.value,
-    lugar:lugar.value,
-    maps:maps.value,
-    itinerario:itinerario.value,
-    dress:dress.value,
-    hashtag:hashtag.value,
-    whats:whats.value
+    nombre: document.getElementById("nombre").value,
+    fecha: document.getElementById("fecha").value,
+    hora: document.getElementById("hora").value,
+    lugar: document.getElementById("lugar").value,
+    maps: document.getElementById("maps").value,
+    itinerario: document.getElementById("itinerario").value,
+    dress: document.getElementById("dress").value,
+    hashtag: document.getElementById("hashtag").value,
+    whats: document.getElementById("whats").value
   }
   localStorage.setItem("datosInv",JSON.stringify(datos));
-  alert("Datos guardados. Abre index.html");
+  alert("Datos guardados. Abre index.html en el mismo navegador");
 }
 </script>
 
