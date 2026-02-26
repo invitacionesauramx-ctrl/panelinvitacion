@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel Admin Invitación</title>
+<style>
+body{font-family:Poppins,Arial;background:#fdecef;padding:20px}
+.panel{
+  max-width:450px;
+  background:#fff;
+  padding:20px;
+  border-radius:20px;
+  margin:auto;
+  box-shadow:0 10px 25px rgba(0,0,0,.15)
+}
+input,textarea{
+  width:100%;
+  padding:10px;
+  margin:6px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
+}
+button{
+  background:#ff6fa9;
+  border:none;
+  padding:12px;
+  border-radius:20px;
+  width:100%;
+  color:#fff;
+  font-weight:600;
+  margin-top:10px;
+}
+h2{text-align:center;color:#ff4f9a}
+</style>
+</head>
+
+<body>
+
+<div class="panel">
+<h2>Panel Admin Invitación</h2>
+
+<input id="nombre" placeholder="Nombre festejada">
+<input id="fecha" placeholder="Fecha (15 Agosto 2026)">
+<input id="hora" placeholder="Hora (7:00 PM)">
+<input id="lugar" placeholder="Lugar del evento">
+<input id="maps" placeholder="Link Google Maps">
+<input id="itinerario" placeholder="Itinerario separado por comas">
+<input id="dress" placeholder="Dress code">
+<input id="hashtag" placeholder="Hashtag">
+<input id="whats" placeholder="WhatsApp sin espacios">
+
+<button onclick="guardar()">Guardar Invitación</button>
+</div>
+
+<script>
+function guardar(){
+  const datos={
+    nombre:nombre.value,
+    fecha:fecha.value,
+    hora:hora.value,
+    lugar:lugar.value,
+    maps:maps.value,
+    itinerario:itinerario.value,
+    dress:dress.value,
+    hashtag:hashtag.value,
+    whats:whats.value
+  }
+  localStorage.setItem("datosInv",JSON.stringify(datos));
+  alert("Datos guardados. Abre index.html");
+}
+</script>
+
+</body>
+</html>
